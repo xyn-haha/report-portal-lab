@@ -1,0 +1,17 @@
+# ============================================================================
+# 报表管理平台 —— 教学靶场（可选：用 compose 一键拉起）
+# 仅限本地隔离环境使用，禁止公网部署。
+# ============================================================================
+services:
+  report-portal:
+    build: .
+    image: report-portal-lab:latest
+    container_name: report-portal-lab
+    ports:
+      - "127.0.0.1:8080:8080"   # 只绑定本机回环，避免被外部访问
+    environment:
+      # 如需固定验证值以便复现，可取消下面两行注释并自行填写
+      # USER_FLAG: "FLAG{your_user_flag}"
+      # ROOT_FLAG: "FLAG{your_root_flag}"
+      INTERNAL_SIGN_KEY: ""      # 留空则每次初始化随机生成
+    restart: "no"

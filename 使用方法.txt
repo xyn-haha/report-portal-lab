@@ -1,0 +1,24 @@
+报表管理平台 · 教学靶场 —— 使用方法
+
+一、启动
+  docker build -t report-portal-lab .
+  docker run -d --name report-portal-lab -p 127.0.0.1:18081:8080 report-portal-lab
+
+二、访问
+  浏览器打开 http://127.0.0.1:18081
+
+三、说明
+  · 无需任何账号，登录接口没有可用凭证
+  · 目标是找出靶场中的两个验证值（flag），格式为 FLAG{...}
+  · 一个在应用层可达的位置，另一个需要更深入地理解系统后才能拿到
+  · 过程请自行探索，注意观察页面的每一个细节
+
+四、停止 / 重建
+  docker rm -f report-portal-lab          # 停止并删除容器
+  docker run -d --name report-portal-lab -p 127.0.0.1:18081:8080 report-portal-lab   # 重建（验证值会重新随机生成）
+
+五、约束
+  仅限本地学习研究使用，禁止公网部署，禁止用于任何未经授权的测试。
+
+六、完整文档
+  见同目录 README.md

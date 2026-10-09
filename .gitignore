@@ -1,0 +1,23 @@
+# 运行时生成的数据文件（由容器首次启动自动创建）
+data/
+*.db
+*.db-journal
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 做题时下载/生成的临时文件
+report.db
+leak.db
+*.log

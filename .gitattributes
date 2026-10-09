@@ -1,0 +1,35 @@
+# ============================================================================
+#  .gitattributes —— 统一文件格式（行尾、编码等）
+#
+#  为什么需要它：
+#    Windows 用 CRLF 换行，Linux 用 LF。如果仓库里的 shell 脚本被检出成 CRLF，
+#    在 Linux 容器里执行会报 ": not found" —— 因为 \r 被当成了命令的一部分。
+#
+#    这个项目是 Docker 项目，容器里跑的是 Linux，所以【工作区也统一用 LF】。
+#    这样无论谁 clone、用什么系统，build 出来的镜像行为都一致。
+# ============================================================================
+
+# 所有文本文件：让 Git 自动识别，并且工作区统一用 LF
+* text=auto eol=lf
+
+# 明确指定为 LF 的文件类型（Docker 项目里的关键几类）
+*.sh    text eol=lf
+Dockerfile text eol=lf
+*.py    text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.json  text eol=lf
+*.html  text eol=lf
+*.css   text eol=lf
+*.js    text eol=lf
+
+# 二进制文件：不要做任何换行转换，否则会损坏文件
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.zip   binary
+*.gz    binary
+*.db    binary
