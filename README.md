@@ -1,5 +1,6 @@
 # 报表管理平台 · 链式安全教学靶场
 
+[![build-and-smoke-test](https://github.com/xyn-haha/report-portal-lab/actions/workflows/build.yml/badge.svg)](https://github.com/xyn-haha/report-portal-lab/actions/workflows/build.yml)
 > **免责声明**
 >
 > 本项目为**完全自研的网络安全教学靶场**，仅演示通用业务系统安全缺陷原理，**与任何商业软件无关**。
